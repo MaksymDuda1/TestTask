@@ -1,6 +1,7 @@
 export class UrlForShortModel{
     longUrl: string = '';
     code: string = '';
+    userId: string = '';
 }
 
 export class UrlModel{
@@ -9,6 +10,7 @@ export class UrlModel{
     shortUrl: string = '';
     code: string = ''; 
     dateOfCreation: Date = new Date(); 
+    userId: string = '';
 }
 
 export class ShortenerUrl{

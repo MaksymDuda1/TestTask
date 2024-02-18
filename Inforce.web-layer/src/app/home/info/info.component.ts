@@ -22,6 +22,7 @@ export class InfoComponent implements OnInit {
        this.url.longUrl = params['longUrl'];
        this.url.shortUrl = params['shortUrl'];
        this.url.dateOfCreation = params['dateOfCreation'];
+       this.url.userId = params['userId'];
     });
   }
 }

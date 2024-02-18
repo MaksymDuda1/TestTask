@@ -10,4 +10,8 @@ public class ShortenerUrl
     public string Code { get; set; } = null!;
 
     public DateTime DateOfCreation { get; set; }
+
+    public Guid UserId { get; set; }
+
+    public User User { get; set; } = null!;
 }

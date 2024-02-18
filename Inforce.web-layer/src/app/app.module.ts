@@ -15,10 +15,7 @@ import { AuthTokenAddInetrceptor } from '../services/inceptors/auth-token.incept
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { InfoComponent } from './home/info/info.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DeletionConfirmationDialogComponent } from './home/deletion-confirmation-dialog/deletion-confirmation-dialog.component';
-
-
-
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +25,7 @@ import { DeletionConfirmationDialogComponent } from './home/deletion-confirmatio
     RegisterComponent,
     TopMenuComponent,
     InfoComponent,
-    DeletionConfirmationDialogComponent
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

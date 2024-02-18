@@ -1,5 +1,6 @@
 using Inforce.TestTask.Abstractions.Repositories;
 using Inforce.TestTask.Abstractions.Services;
+using Inforce.TestTask.Data;
 using Inforce.TestTask.Dtos;
 using Inforce.TestTask.Models;
 using Microsoft.IdentityModel.Tokens;
@@ -46,6 +47,11 @@ public class UrlShorteningService : IUrlShorteningService
         await urlShorteningRepository.DeleteAll();
     }
 
+    public async Task<string> GetCreatorId(Guid urlId)
+    {
+        return await urlShorteningRepository.GetCreatorId(urlId);
+    }
+
     public async Task<ShortenerUrl> CreateShortenerUrl(UrlDto request)
     {
         if (!Uri.TryCreate(request.LongUrl, UriKind.Absolute, out _))
@@ -65,7 +71,8 @@ public class UrlShorteningService : IUrlShorteningService
             ShortUrl = $"{httpContextAccessor.HttpContext.Request.Scheme}" +
                        $"://{httpContextAccessor.HttpContext.Request.Host}/api/{code}",
             Code = code,
-            DateOfCreation = DateTime.UtcNow
+            DateOfCreation = DateTime.UtcNow,
+            UserId = request.UserId
         };
 
         await urlShorteningRepository.CreateShortenerUrl(shortenerUrl);

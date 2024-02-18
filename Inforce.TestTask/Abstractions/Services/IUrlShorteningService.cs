@@ -9,6 +9,7 @@ public interface IUrlShorteningService
     Task<ShortenerUrl> GetShortenedUrl(string code);
     Task<List<ShortenerUrl>> GetAllUrls();
     Task<ShortenerUrl> GetUrlById(Guid id);
+    Task<string> GetCreatorId(Guid urlId);
     Task DeleteUrlById(Guid id);
     Task DeleteAllUrls();
 }

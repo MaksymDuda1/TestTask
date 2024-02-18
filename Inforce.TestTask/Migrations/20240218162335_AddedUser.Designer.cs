@@ -3,6 +3,7 @@ using System;
 using Inforce.TestTask.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Inforce.TestTask.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240218162335_AddedUser")]
+    partial class AddedUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,51 +24,6 @@ namespace Inforce.TestTask.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
-
-            modelBuilder.Entity("Inforce.TestTask.Models.AlgorithmInfoModel", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Stage1")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Stage2")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Stage3")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Stage4")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Stage5")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Stage6")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Stage7")
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("AlgorithmModels");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("eac5ba03-6e4f-498d-b59c-b76d3d55230c"),
-                            Stage1 = "Take the user's url",
-                            Stage2 = "Check if he entered the code that will replace the url or if it needs to be generated randomly (the code must be unique)",
-                            Stage3 = "Add the url to the database",
-                            Stage4 = "Wait for the necessary get request",
-                            Stage5 = "Take the code from this request",
-                            Stage6 = "Take the corresponding record with the corresponding code in the database",
-                            Stage7 = "Redirect the user to the original request"
-                        });
-                });
 
             modelBuilder.Entity("Inforce.TestTask.Models.Role", b =>
                 {
@@ -96,13 +54,13 @@ namespace Inforce.TestTask.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("42f35fda-48a0-469a-bb97-2d4c4e69f28f"),
+                            Id = new Guid("577f9e2a-3a04-4766-b574-a95d55e03d78"),
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = new Guid("ca24ea62-8333-48d2-a028-e63bbc194073"),
+                            Id = new Guid("9c28d4a5-babc-4eee-8d41-9c2988b83a3d"),
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });

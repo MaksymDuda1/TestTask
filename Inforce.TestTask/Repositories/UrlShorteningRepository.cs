@@ -44,7 +44,7 @@ public class UrlShorteningRepository : IUrlShorteningRepository
     public async Task Delete(Guid id)
     {
         await context.ShortenerUrls
-            .Where(s => s.Id == id)
+            .Where(s => s.Id == id )
             .ExecuteDeleteAsync();
     }
 
@@ -55,11 +55,19 @@ public class UrlShorteningRepository : IUrlShorteningRepository
         await context.SaveChangesAsync();
     }
 
+    public async Task<string> GetCreatorId(Guid id)
+    {
+        var url = await context.ShortenerUrls.FirstOrDefaultAsync(u => u.Id == id);
+
+        if (url == null)
+            throw new Exception();
+        
+        return url.UserId.ToString();
+    }
+
     public async Task<ShortenerUrl> GetShortenedUrl(string code)
     {
         var url = await context.ShortenerUrls.FirstOrDefaultAsync(s => s.Code == code);
-
-        Console.WriteLine(code);
         
         if (url == null)
             throw new Exception("Url doesn't exist");

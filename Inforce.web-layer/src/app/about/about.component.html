@@ -1,0 +1,49 @@
+<div class="container-md ">
+    <div class="header">
+        <span>About Agorithm</span>
+    </div>
+    <form>
+        <div class="mb-3">
+            <label for="Stage1" class="form-label">Stage 1:</label>
+            <input type="text" name="stage1" class="form-control" [value]="stage1" [(ngModel)]="stage1" id="Stage1"
+                aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="Stage2" class="form-label">Stage 2:</label>
+            <input type="text" name="stage2" class="form-control" [value]="stage2" [(ngModel)]="stage2" id="Stage2"
+                aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+            <label for="Stage3" class="form-label">Stage 3:</label>
+            <input type="text" name="stage3" class="form-control" [value]="stage3" [(ngModel)]="stage3" id="Stage3"
+                aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+            <label for="Stage4" class="form-label">Stage 4:</label>
+            <input type="text" name="stage4" class="form-control" [value]="stage4" [(ngModel)]="stage4" id="Stage4"
+                aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+            <label for="Stage5" class="form-label">Stage 5:</label>
+            <input type="text" name="stage4" class="form-control" [value]="stage5" [(ngModel)]="stage5" id="Stage5"
+                aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+            <label for="Stage6" class="form-label">Stage 6:</label>
+            <input type="text" name="stage5" class="form-control" [value]="stage6" [(ngModel)]="stage6" id="Stage6"
+                aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+            <label for="Stage7" class="form-label">Stage 7:</label>
+            <input type="text" name="stage6" class="form-control" [value]="stage7" [(ngModel)]="stage7" id="Stage7"
+                aria-describedby="emailHelp">
+        </div>
+
+        <button type="submit" name="stage7" class="btn btn-dark" *ngIf="isAdmin">Submit</button>
+    </form>
+</div>

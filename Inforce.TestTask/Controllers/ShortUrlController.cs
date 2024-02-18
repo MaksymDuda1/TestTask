@@ -3,6 +3,7 @@ using Inforce.TestTask.Data;
 using Inforce.TestTask.Dtos;
 using Inforce.TestTask.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Inforce.TestTask.Controllers;
@@ -74,6 +75,20 @@ public class ShortUrlController : ControllerBase
             await shorteningService.DeleteUrlById(id);
             return Ok();
         }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+    [HttpGet("creator/{id}")]
+    public async Task<ActionResult<string>> GetCreatorId(Guid id)
+    {
+        try
+        {
+            return await shorteningService.GetCreatorId(id);
+        }
+
         catch (Exception e)
         {
             return BadRequest(e.Message);

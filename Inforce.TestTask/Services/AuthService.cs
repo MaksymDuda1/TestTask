@@ -51,9 +51,16 @@ public class AuthService : IAuthService
         {
             await userManager.AddToRoleAsync(user, "User");
 
-            var claim = await userManager.GetClaimsAsync(user);
+            var authClaims = new List<Claim>
+            {
+                new(ClaimTypes.Email, user.Email),
+                new(JwtRegisteredClaimNames.Jti, user.Id.ToString())
+            };
 
-            return tokenService.CreateToken(claim);
+            var roles = await userManager.GetRolesAsync(user);
+            tokenService.AddRolesToClaims(authClaims, roles);
+
+            return tokenService.CreateToken(authClaims);
         }
 
         throw new Exception("An error occurred during processing");

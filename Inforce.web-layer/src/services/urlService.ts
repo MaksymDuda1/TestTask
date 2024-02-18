@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { UrlModel, UrlForShortModel, ShortenerUrl } from "../models/url";
+import { UrlModel, UrlForShortModel } from "../models/url";
 
 @Injectable({providedIn:"root"})
 export class UrlService{
@@ -19,6 +19,10 @@ export class UrlService{
 
     getById(id: string): Observable<UrlModel>{
         return this.client.get<UrlModel>("api/urls/" + id)
+    }
+
+    getCreatorIdByUrl(id:string): Observable<string>{
+        return this.client.get("api/urls/creator/" + id, {responseType: "text"});
     }
 
     deleteById(id:string){

@@ -4,8 +4,11 @@
             <span class="logo-text">TestTask</span>
         </a>
     </div>
-    
-    <button *ngIf="isLogged" class="btn btn-dark" (click)="onExit()">Exit</button>
+
+    <div class="div">
+        <button *ngIf="isLogged" class="btn btn-dark" (click)="onExit()">Exit</button>
+        <button class="btn btn-dark" [routerLink]="'/about'">About</button>
+    </div>
 
     <div class="">
         <button *ngIf="!isLogged" class="btn btn-dark" [routerLink]="'/login'">Sign in</button>

@@ -23,6 +23,8 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IGenerateCodeService, GenerateCodeService>();
 builder.Services.AddScoped<IUrlShorteningService, UrlShorteningService>();
 builder.Services.AddScoped<IUrlShorteningRepository, UrlShorteningRepository>();
+builder.Services.AddScoped<IAlgorithmInfoRepository, AlgorithmInfoRepository>();
+builder.Services.AddScoped<IAlgorithmInfoService, AlgorithmInfoService>();
 
 builder.Services.AddIdentity<User, Role>(options =>
     {

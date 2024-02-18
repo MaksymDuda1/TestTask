@@ -34,7 +34,7 @@ public class TokenService : ITokenService
 
         return tokenHandler.WriteToken(token);
     }
-
+    
     public void AddRolesToClaims(List<Claim> claims, IList<string> roles)
     {
         foreach (var role in roles)

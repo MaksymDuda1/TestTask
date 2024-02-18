@@ -112,3 +112,4 @@
 /home/maksi/Studying/Inforce.TestTask/Inforce.TestTask/obj/Debug/net8.0/Inforce.TestTask.pdb
 /home/maksi/Studying/Inforce.TestTask/Inforce.TestTask/obj/Debug/net8.0/Inforce.TestTask.genruntimeconfig.cache
 /home/maksi/Studying/Inforce.TestTask/Inforce.TestTask/obj/Debug/net8.0/ref/Inforce.TestTask.dll
+/home/maksi/Studying/Inforce.TestTask/Inforce.TestTask/obj/Debug/net8.0/Inforce.TestTask.sourcelink.json

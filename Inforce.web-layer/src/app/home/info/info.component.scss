@@ -8,3 +8,9 @@ span{
     font-weight: 600;
     font-size: larger;
 }
+
+.full-url{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:unset ;
+}

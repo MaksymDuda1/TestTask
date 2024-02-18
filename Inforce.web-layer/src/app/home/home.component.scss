@@ -20,3 +20,14 @@ th:nth-child(2),
 td:nth-child(2) {
     width: 30%;
 }
+
+.table td {
+    max-width: 300px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.container{
+    margin-top: 4em;
+}
