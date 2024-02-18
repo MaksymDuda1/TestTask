@@ -81,7 +81,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     let token = this.localService.get(LocalService.AuthTokenName);
 
     if (token) {
@@ -91,5 +90,5 @@ export class HomeComponent implements OnInit {
       this.userId = decodedData.jti;
     }
   }
-
 }
+
