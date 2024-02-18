@@ -1,4 +1,5 @@
 using Inforce.TestTask.Dtos;
+using Inforce.TestTask.Dtos.auth;
 
 namespace Inforce.TestTask.Abstractions.Services;
 

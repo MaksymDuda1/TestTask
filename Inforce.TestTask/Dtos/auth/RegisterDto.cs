@@ -1,6 +1,6 @@
-namespace Inforce.TestTask.Dtos;
+namespace Inforce.TestTask.Dtos.auth;
 
-public class LoginDto
+public class RegisterDto
 {
     public string Email { get; set; } = null!;
     public string Password { get; set; } = null!;

@@ -2,6 +2,7 @@ using System.Security.Authentication;
 using System.Security.Claims;
 using Inforce.TestTask.Abstractions.Services;
 using Inforce.TestTask.Dtos;
+using Inforce.TestTask.Dtos.auth;
 using Inforce.TestTask.Models;
 using Inforce.TestTask.Models.Auth;
 using Microsoft.AspNetCore.Identity;

@@ -1,10 +1,13 @@
 namespace Inforce.TestTask.Dtos;
 
-public record AlgorithmInfoDto(
-    string Stage1,
-    string Stage2,
-    string Stage3,
-    string Stage4,
-    string Stage5,
-    string Stage6,
-    string Stage7);
+public class AlgorithmInfoDto
+{ 
+    public string Stage1 { get; set; }
+    public string Stage2 { get; set; }
+    public string Stage3 { get; set; }
+    public string Stage4 { get; set; }
+    public string Stage5 { get; set; }
+    public string Stage6 { get; set; }
+    public string Stage7 { get; set; }
+    
+}

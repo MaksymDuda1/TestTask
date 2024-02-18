@@ -31,6 +31,4 @@ public class AdminController : ControllerBase
             return BadRequest(e.Message);
         }
     }
-
-   
 }
