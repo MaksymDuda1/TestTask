@@ -57,12 +57,9 @@ public class UrlShorteningService : IUrlShorteningService
         if (!Uri.TryCreate(request.LongUrl, UriKind.Absolute, out _))
             throw new Exception("The specified URL is invalid.");
 
-        var code = "";
-
-        if (request.Code.IsNullOrEmpty())
-            code = await generateCodeService.GenerateUniqueCode();
-        else
-            code = await generateCodeService.GenerateUniqueCode(request.Code);
+        string code = string.IsNullOrEmpty(request.Code) 
+            ? await generateCodeService.GenerateUniqueCode() 
+            : await generateCodeService.GenerateUniqueCode(request.Code);
 
         var shortenerUrl = new ShortenerUrl
         {

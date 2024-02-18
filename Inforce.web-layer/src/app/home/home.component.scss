@@ -31,3 +31,11 @@ td:nth-child(2) {
 .container{
     margin-top: 4em;
 }
+
+.table th, .table td {
+    padding: 8px;
+}
+
+.table tr {
+    border-bottom: 1px solid #dddddd; /* підкреслення рядків */
+}

@@ -9,7 +9,7 @@ export class UrlModel{
     longUrl: string = '';
     shortUrl: string = '';
     code: string = ''; 
-    dateOfCreation: Date = new Date(); 
+    dateOfCreation: string = ''; 
     userId: string = '';
 }
 

@@ -66,6 +66,20 @@ export class HomeComponent implements OnInit {
       })
   }
 
+
+  confirmDelete(id: string) {
+    if (confirm('Are you sure that you want to delete this Url?')) {
+      this.deleteById(id);
+    }
+  }
+
+
+  confirmDeleteAll() {
+    if (confirm('Are you sure that you want to delete all data?')) {
+      this.deleteAll();
+    }
+  }
+
   addNewUrl() {
     let url = new UrlForShortModel();
     url.longUrl = this.longUrl;

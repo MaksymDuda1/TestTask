@@ -7,7 +7,7 @@
                 <th scope="col">Actions</th>
                 <th>
                     <div class="img-holder">
-                        <a (click)="deleteAll()" *ngIf="isAdmin"><img src="../../assets/images/delete.png" alt=""></a>
+                        <a (click)="confirmDeleteAll()" *ngIf="isAdmin"><img src="../../assets/images/delete.png" alt=""></a>
                     </div>
                 </th>
             </tr>
@@ -15,13 +15,7 @@
         <tbody>
             <tr>
                 <td>
-                    <span>you can write your own short url or generate it by random</span>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                 <td>
+                    <span>You can write your own short url or generate it by random</span>
                 </td>
             </tr>
             <tr *ngFor="let url of urls$ | async">
@@ -34,7 +28,7 @@
                 </td>
                 <td>
                     <div class="img-holder">
-                        <a (click)="deleteById(url.id)" *ngIf="islogged"><img src="../../assets/images/delete.png" alt=""></a>
+                        <a (click)="confirmDelete(url.id)" *ngIf="islogged"><img src="../../assets/images/delete.png" alt=""></a>
                     </div>
                 </td>
 
@@ -48,12 +42,8 @@
                                 alt=""></a>
                     </div>
                 </td>
-                <td>
-                </td>
             </tr>
-
             {{errorMessage}}
-
         </tbody>
     </table>
 </div>

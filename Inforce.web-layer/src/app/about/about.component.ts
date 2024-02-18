@@ -20,6 +20,7 @@ export class AboutComponent implements OnInit {
   
   islogged: boolean = false;
   isAdmin: boolean = false;
+  message = '';
 
   algorithmInfo = new AlgorithInfoModel();
 
@@ -28,6 +29,7 @@ export class AboutComponent implements OnInit {
     let algorithInfoModel = this.algorithmInfo;
     this.algorithmInfoService.updateAlgorithmInfo(algorithInfoModel).subscribe(data => {
       this.algorithmInfo = data;
+      this.message = "Updated"
     });
 }
 

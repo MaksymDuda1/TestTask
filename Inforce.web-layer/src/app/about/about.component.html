@@ -28,22 +28,23 @@
 
         <div class="mb-3">
             <label for="Stage5" class="form-label">Stage 5:</label>
-            <input type="text" name="stage4" class="form-control" [value]="algorithmInfo.stage5" [(ngModel)]="algorithmInfo.stage5" id="stage5"
+            <input type="text" name="stage5" class="form-control" [value]="algorithmInfo.stage5" [(ngModel)]="algorithmInfo.stage5" id="stage5"
                 aria-describedby="emailHelp">
         </div>
 
         <div class="mb-3">
             <label for="Stage6" class="form-label">Stage 6:</label>
-            <input type="text" name="stage5" class="form-control" [value]="algorithmInfo.stage6" [(ngModel)]="algorithmInfo.stage6" id="stage6"
+            <input type="text" name="stage6" class="form-control" [value]="algorithmInfo.stage6" [(ngModel)]="algorithmInfo.stage6" id="stage6"
                 aria-describedby="emailHelp">
         </div>
 
         <div class="mb-3">
             <label for="Stage7" class="form-label">Stage 7:</label>
-            <input type="text" name="stage6" class="form-control" [value]="algorithmInfo.stage7" [(ngModel)]="algorithmInfo.stage7" id="stage7"
+            <input type="text" name="stage7" class="form-control" [value]="algorithmInfo.stage7" [(ngModel)]="algorithmInfo.stage7" id="stage7"
                 aria-describedby="emailHelp">
         </div>
 
         <button type="submit" name="stage7" class="btn btn-dark" *ngIf="isAdmin" (click)="onUpdate()">Submit</button>
+        {{message}}
     </form>
 </div>
