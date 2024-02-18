@@ -1,0 +1,22 @@
+.img-holder{
+    height: 32px;
+    width: 32px;
+}
+
+.img-holder img{
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    align-items: center;
+}
+
+
+th:nth-child(1),
+td:nth-child(1) {
+    width: 40%; 
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 30%;
+}

@@ -1,0 +1,15 @@
+<nav class="navbar navbar-Light ">
+    <div class="logo">
+        <a routerLink="/">
+            <span class="logo-text">TestTask</span>
+        </a>
+    </div>
+    
+    <button *ngIf="isLogged" class="btn btn-dark" (click)="onExit()">Exit</button>
+
+    <div class="">
+        <button *ngIf="!isLogged" class="btn btn-dark" [routerLink]="'/login'">Sign in</button>
+        <button *ngIf="!isLogged" class="btn btn-dark" [routerLink]="'/register'">Sign up</button>
+    </div>
+
+</nav>

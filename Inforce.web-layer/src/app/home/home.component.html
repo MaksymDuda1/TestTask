@@ -1,0 +1,68 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Full URL</th>
+                <th scope="col">Short URL</th>
+                <th scope="col">Actions</th>
+                <th>
+                    <div class="img-holder">
+                        <a (click)="deleteAll()" *ngIf="isAdmin"><img src="../../assets/images/delete.png" alt=""></a>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+
+                    <span>you can write your own short url or generate it by clicking on the generate button</span>
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                 <td>
+                    
+                </td>
+            </tr>
+            <tr *ngFor="let url of urls$ | async">
+                <td>{{url.longUrl}}</td>
+                <td>{{url.shortUrl}}</td>
+                <td>
+                    <div class="img-holder">
+                        <a (click)="getById(url.id)" *ngIf="islogged"><img src="../../assets/images/info.png" alt=""></a>
+                    </div>
+                </td>
+                <td>
+                    <div class="img-holder">
+                        <a (click)="deleteById(url.id)" *ngIf="islogged"><img src="../../assets/images/delete.png" alt=""></a>
+                    </div>
+                </td>
+
+            </tr>
+            <tr *ngIf="islogged">
+                <td><input type="text" class="form-control" [(ngModel)]="longUrl" placeholder="Enter Url"></td>
+                <td><input type="text"class="form-control" placeholder="Enter Short Url or click on random button" [maxlength]="8" [(ngModel)]="code"></td>
+                <td>
+                    <div class="img-holder">
+                        <a (click)="addNewUrl()"><img src="../../assets/images/free-icon-add-button-2740600.png"
+                                alt=""></a>
+                    </div>
+                </td>
+                <td>
+                    <div class="img-holder">
+                        <a (click)="addNewUrl()"><img src="../../assets/images/free-icon-development-10228555.png"
+                                alt=""></a>
+                    </div>
+                </td>
+            </tr>
+
+            {{errorMessage}}
+
+        </tbody>
+    </table>
+    <app-deletion-confirmation-dialog></app-deletion-confirmation-dialog>
+</div>
