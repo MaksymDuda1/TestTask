@@ -44,7 +44,10 @@
                 aria-describedby="emailHelp">
         </div>
 
+        <div class="btns">
         <button type="submit" name="stage7" class="btn btn-dark" *ngIf="isAdmin" (click)="onUpdate()">Submit</button>
+        <button class="btn btn-dark" [routerLink]="''">Back</button>
+    </div>
         {{message}}
     </form>
 </div>
