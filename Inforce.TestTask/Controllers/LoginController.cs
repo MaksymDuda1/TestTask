@@ -1,6 +1,5 @@
 using Inforce.TestTask.Abstractions.Services;
-using Inforce.TestTask.Dtos;
-using Inforce.TestTask.Dtos.auth;
+using Inforce.TestTask.Dtos.Auth;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Inforce.TestTask.Controllers;
