@@ -63,7 +63,7 @@ public class AuthService : IAuthService
             return tokenService.CreateToken(authClaims);
         }
 
-        throw new Exception("An error occurred during processing");
+        throw new Exception("Can not create user with this data");
     }
 
     public async Task<string> LoginUser(LoginDto request)
